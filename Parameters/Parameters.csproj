@@ -45,11 +45,24 @@
     <Compile Include="IParameterContainer.cs" />
     <Compile Include="IParameterHeader.cs" />
     <Compile Include="IUnit.cs" />
+    <Compile Include="NamedParameters\AFilcker.cs" />
+    <Compile Include="NamedParameters\AlphaFlicker.cs" />
+    <Compile Include="NamedParameters\Amplification.cs" />
+    <Compile Include="NamedParameters\AveragingPoints.cs" />
+    <Compile Include="NamedParameters\Current.cs" />
+    <Compile Include="NamedParameters\CurrentSpectralDensity.cs" />
+    <Compile Include="NamedParameters\EquivalentNoiseSpectralDensity.cs" />
+    <Compile Include="NamedParameters\FileParam.cs" />
+    <Compile Include="NamedParameters\FreqTimesCurSpecDensDivCurSquare.cs" />
+    <Compile Include="NamedParameters\Frequency.cs" />
+    <Compile Include="NamedParameters\FrequencyTimesCurrentSpectralDensity.cs" />
+    <Compile Include="NamedParameters\Resistance.cs" />
+    <Compile Include="NamedParameters\Temperature.cs" />
+    <Compile Include="NamedParameters\Voltage.cs" />
+    <Compile Include="NamedParameters\VoltageSpectralDensity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NamedParameters\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

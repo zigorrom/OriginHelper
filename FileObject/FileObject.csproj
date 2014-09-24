@@ -41,13 +41,28 @@
   <ItemGroup>
     <Compile Include="FileObject.cs" />
     <Compile Include="FileReaderConfig.cs" />
+    <Compile Include="Parameters\AbstractParameter.cs" />
+    <Compile Include="Parameters\IParameter.cs" />
+    <Compile Include="Parameters\IParameterColumn.cs" />
+    <Compile Include="Parameters\IParameterContainer.cs" />
+    <Compile Include="Parameters\IParameterHeader.cs" />
+    <Compile Include="Parameters\IUnit.cs" />
+    <Compile Include="Parameters\NamedParameters\AFilcker.cs" />
+    <Compile Include="Parameters\NamedParameters\AlphaFlicker.cs" />
+    <Compile Include="Parameters\NamedParameters\Amplification.cs" />
+    <Compile Include="Parameters\NamedParameters\AveragingPoints.cs" />
+    <Compile Include="Parameters\NamedParameters\Current.cs" />
+    <Compile Include="Parameters\NamedParameters\CurrentSpectralDensity.cs" />
+    <Compile Include="Parameters\NamedParameters\EquivalentNoiseSpectralDensity.cs" />
+    <Compile Include="Parameters\NamedParameters\FileParam.cs" />
+    <Compile Include="Parameters\NamedParameters\FreqTimesCurSpecDensDivCurSquare.cs" />
+    <Compile Include="Parameters\NamedParameters\Frequency.cs" />
+    <Compile Include="Parameters\NamedParameters\FrequencyTimesCurrentSpectralDensity.cs" />
+    <Compile Include="Parameters\NamedParameters\Resistance.cs" />
+    <Compile Include="Parameters\NamedParameters\Temperature.cs" />
+    <Compile Include="Parameters\NamedParameters\Voltage.cs" />
+    <Compile Include="Parameters\NamedParameters\VoltageSpectralDensity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Parameters\Parameters.csproj">
-      <Project>{0f8676b8-a16a-404c-a0ee-24b1ad93717d}</Project>
-      <Name>Parameters</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

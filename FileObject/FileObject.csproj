@@ -41,10 +41,13 @@
   <ItemGroup>
     <Compile Include="FileObject.cs" />
     <Compile Include="FileReaderConfig.cs" />
-    <Compile Include="IParameterColumn.cs" />
-    <Compile Include="IParameterContainer.cs" />
-    <Compile Include="IParameterHeader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Parameters\Parameters.csproj">
+      <Project>{0f8676b8-a16a-404c-a0ee-24b1ad93717d}</Project>
+      <Name>Parameters</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

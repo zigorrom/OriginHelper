@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FileObject
+namespace Parameters
 {
-    public interface IParameterHeader
+    public interface IParameterContainer
     {
     }
 }

@@ -39,7 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractParameter.cs" />
+    <Compile Include="IParameter.cs" />
+    <Compile Include="IParameterColumn.cs" />
+    <Compile Include="IParameterContainer.cs" />
+    <Compile Include="IParameterHeader.cs" />
+    <Compile Include="IUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NamedParameters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

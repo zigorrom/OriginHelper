@@ -54,7 +54,8 @@ namespace FileObject
                 {
                     foreach (var param in m_ContainingParameters)
                     {
-                        m_ParameterColumns[param.Key].AddParameter(LineItems[param.Value]);
+                        var Parameter = param.Key.CreateParameter(LineItems[param.Value]);
+                        m_ParameterColumns[param.Key].AddParameter(Parameter);
                     }
                 }
                 catch (Exception e)

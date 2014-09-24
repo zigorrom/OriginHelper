@@ -7,7 +7,7 @@ namespace Parameters
 {
     public interface IParameterColumn:IList<IParameter>
     {
-        void AddParameter(string p);
+        //void AddParameter(string p);
         void AddParameter(IParameter p);
     }
 }

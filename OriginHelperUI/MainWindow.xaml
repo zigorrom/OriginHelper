@@ -1,8 +1,11 @@
-﻿<Window x:Class="OriginHelperUI.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        xmlns:local="clr-namespace:OriginHelperUI" x:Class="OriginHelperUI.MainWindow"
+        Title="MainWindow" Height="546" Width="817">
+	<Grid>
+		<local:ParamDataGrid Margin="10,48.4,10,10"/>
+		<Menu HorizontalAlignment="Left" Height="33.4" Margin="10,10,0,0" VerticalAlignment="Top" Width="790.6"/>
         
-    </Grid>
+	</Grid>
 </Window>

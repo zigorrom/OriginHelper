@@ -34,7 +34,11 @@ namespace OriginHelperUI
                 new FileReaderConfig(0, 0, 0, 2, 0, ""),
                  dict
                 );
-            this.DataContext = file;
+            //Binding bind = new Binding();
+            //bind.Source = file;
+            //bind.Path = new PropertyPath("ParameterColumns");
+            //bind.Mode = BindingMode.TwoWay;
+            //ParameterDataGrid.SetBinding()
         }
         private FileObject file;
     }

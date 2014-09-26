@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FileObjectProject;
+using Parameters;
+using Parameters.NamedParameters;
 
 namespace OriginHelperUI
 {
@@ -23,6 +26,16 @@ namespace OriginHelperUI
         public MainWindow()
         {
             InitializeComponent();
+            var dict = new Dictionary<IParameterHeader, int>();
+            dict.Add(new ParameterHeader<Voltage>("V1", "Comment1", null), 0);
+            dict.Add(new ParameterHeader<Current>("C1", "Comment2", null), 1);
+            file = new FileObject(
+                @"D:\Master\Optimization SiNW FETs\I.Zadorozhniy\Progen\MeasurDataExtended.dat",
+                new FileReaderConfig(0, 0, 0, 2, 0, ""),
+                 dict
+                );
+            this.DataContext = file;
         }
+        private FileObject file;
     }
 }

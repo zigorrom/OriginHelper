@@ -1,18 +1,20 @@
 ﻿using Parameters;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FileObject
+namespace FileObjectProject
 {
-    public class FileObject : StreamReader, IParameterContainer
+    public class FileObject : StreamReader, IParameterContainer 
     {
-        private Dictionary<IParameterHeader, IParameterColumn> m_ParameterColumns;
-        private FileReaderConfig m_config;
-        private Dictionary<IParameterHeader, int> m_ContainingParameters;
+        public Dictionary<IParameterHeader, IParameterColumn> ParameterColumns { get; protected set; }
+        public  FileReaderConfig config { get; protected set; }
+        public Dictionary<IParameterHeader, int> ContainingParameters { get; protected set; }
 
         #region Constructors
 
@@ -33,29 +35,31 @@ namespace FileObject
 
         private void Initialize(FileReaderConfig Config, Dictionary<IParameterHeader, int> ContainingParameters)
         {
-            m_config = Config;
-            m_ContainingParameters = ContainingParameters;
+            this.config = Config;
+            this.ContainingParameters = ContainingParameters;
             InitializeParameters();
         }
         private void InitializeParameters()
         {
-            m_ParameterColumns = new Dictionary<IParameterHeader, IParameterColumn>();
-            foreach (var param in m_ContainingParameters)
+            ParameterColumns = new Dictionary<IParameterHeader, IParameterColumn>();
+            foreach (var param in ContainingParameters)
             {
-                m_ParameterColumns.Add(param.Key, param.Key.CreateEmptyColumn());
+                ParameterColumns.Add(param.Key, param.Key.CreateEmptyColumn());
             }
-            int count = 0;
+          
+            for (int i = 0; i < config.FirstDataLine; i++)
+            {
+                var temp = ReadLine();
+            }
             while (!this.EndOfStream)
             {
-                if (count++ < m_config.FirstDataLine)
-                    continue;
-                var LineItems = ReadLine().Split(m_config.SplitString.ToCharArray());
+                var LineItems = ReadLine().Split(config.SplitString.ToCharArray());
                 try
                 {
-                    foreach (var param in m_ContainingParameters)
+                    foreach (var param in ContainingParameters)
                     {
                         var Parameter = param.Key.CreateParameter(LineItems[param.Value]);
-                        m_ParameterColumns[param.Key].AddParameter(Parameter);
+                        ParameterColumns[param.Key].AddParameter(Parameter);
                     }
                 }
                 catch (Exception e)
@@ -65,6 +69,8 @@ namespace FileObject
             }
         }
         #endregion
+
+
 
 
     }

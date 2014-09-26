@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileObject", "FileObject\FileObject.csproj", "{06295152-E06E-4EB1-BD0A-354E33C17838}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileObjectProject", "FileObject\FileObjectProject.csproj", "{06295152-E06E-4EB1-BD0A-354E33C17838}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginHelperUI", "OriginHelperUI\OriginHelperUI.csproj", "{E3941F4D-D0CF-48F0-B375-C9DAD4E3DE98}"
 EndProject

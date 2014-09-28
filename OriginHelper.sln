@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileObjectProject", "FileOb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginHelperUI", "OriginHelperUI\OriginHelperUI.csproj", "{E3941F4D-D0CF-48F0-B375-C9DAD4E3DE98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearFit", "LinearFit\LinearFit.csproj", "{E38946A8-A416-4C8A-A03A-6D0C3BADCE03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E3941F4D-D0CF-48F0-B375-C9DAD4E3DE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3941F4D-D0CF-48F0-B375-C9DAD4E3DE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3941F4D-D0CF-48F0-B375-C9DAD4E3DE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E38946A8-A416-4C8A-A03A-6D0C3BADCE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E38946A8-A416-4C8A-A03A-6D0C3BADCE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E38946A8-A416-4C8A-A03A-6D0C3BADCE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E38946A8-A416-4C8A-A03A-6D0C3BADCE03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

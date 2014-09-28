@@ -2,17 +2,22 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:OriginHelperUI" xmlns:RuntimeBinder="clr-namespace:Microsoft.CSharp.RuntimeBinder;assembly=Microsoft.CSharp"
-        xmlns:src="clr-namespace:FileObjectProject;assembly=FileObject"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="OriginHelperUI.MainWindow"
+        xmlns:src="clr-namespace:OriginHelperUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:SampleData="clr-namespace:Expression.Blend.SampleData.SampleDataSource" mc:Ignorable="d" x:Class="OriginHelperUI.MainWindow"
     Title="MainWindow" Height="546" Width="817">
-	<Grid d:DataContext="{d:DesignData /SampleData/FileObjectSampleData.xaml}">
-		<Grid.Resources>
-			<ObjectDataProvider x:Key="myData" ObjectType="{x:Type src:FileObject}" >
-				<!--MethodName="ParameterColumns"-->
-			</ObjectDataProvider>
-		</Grid.Resources>
+    
+	<Window.Resources>
+		<SampleData:SampleDataSource x:Key="SampleDataSource" d:IsDataSource="True"/>
+	</Window.Resources>
+    
+	<Grid >
+        
 		<Menu HorizontalAlignment="Left" Height="33.4" Margin="10,10,0,0" VerticalAlignment="Top" Width="790.6"/>
-		<DataGrid x:Name="ParameterDataGrid" HorizontalAlignment="Left" Height="457.6" Margin="10,48.4,0,0" VerticalAlignment="Top" Width="789" AutoGenerateColumns="True" SelectedIndex="{Binding ParameterColumns}" ItemsSource="{Binding ParameterColumns.Values/}"/>
+		<DataGrid x:Name="ParameterDataGrid" HorizontalAlignment="Left" Height="457.6" Margin="10,48.4,0,0" VerticalAlignment="Top" Width="789" AutoGenerateColumns="True" ItemsSource="{Binding Mode=OneWay}">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="{Binding Petro}"/>
+			</DataGrid.Columns>
+		</DataGrid>
         
         
 	</Grid>
